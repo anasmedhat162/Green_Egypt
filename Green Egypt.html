@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية التكنولوجيا الخضراء - نحو مستقبل مستدام</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        greenEco: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #14532d 0%, #166534 50%, #22c55e 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(22, 101, 52, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-greenEco-50 text-gray-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-greenEco-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-12 h-12 rounded-2xl bg-greenEco-600 flex items-center justify-center text-white shadow-lg shadow-greenEco-500/30">
+                    <i class="fa-solid fa-leaf text-2xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black text-greenEco-900 tracking-wide block">أكاديمية التكنولوجيا الخضراء</span>
+                    <span class="text-xs font-semibold text-greenEco-600 block">نحو مستقبل مستدام ونظيف</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse font-semibold text-gray-600">
+                <a href="#about" class="hover:text-greenEco-600 transition">المفهوم والأهمية</a>
+                <a href="#energy" class="hover:text-greenEco-600 transition">الطاقة المتجددة</a>
+                <a href="#cities" class="hover:text-greenEco-600 transition">المدن والزراعة</a>
+                <a href="#calculator" class="hover:text-greenEco-600 transition">حاسبة البصمة</a>
+                <a href="#quiz" class="hover:text-greenEco-600 transition">الاختبار التفاعلي</a>
+                <a href="#guide" class="hover:text-greenEco-600 transition">الدليل اليومي</a>
+            </nav>
+            <div>
+                <a href="#calculator" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-greenEco-600 hover:bg-greenEco-700 text-white font-bold text-sm shadow-lg shadow-greenEco-600/30 transition transform hover:scale-105">
+                    <i class="fa-solid fa-calculator ml-2"></i> احسب بصمتك
+                </a>
+                <button id="mobileMenuBtn" class="md:hidden text-greenEco-800 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-gray-700 font-medium">المفهوم والأهمية</a>
+            <a href="#energy" class="block py-2 text-gray-700 font-medium">الطاقة المتجددة</a>
+            <a href="#cities" class="block py-2 text-gray-700 font-medium">المدن والزراعة</a>
+            <a href="#calculator" class="block py-2 text-gray-700 font-medium">حاسبة البصمة</a>
+            <a href="#quiz" class="block py-2 text-gray-700 font-medium">الاختبار التفاعلي</a>
+            <a href="#guide" class="block py-2 text-gray-700 font-medium">الدليل اليومي</a>
+        </div>
+    </header>
+
+    <section class="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-right">
+                    <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md text-greenEco-100 mb-2">
+                        <i class="fa-solid fa-earth-americas ml-2"></i> كوكبنا، مسؤوليتنا المشتركة
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        اصنع الفارق مع <span class="text-greenEco-300 underline decoration-greenEco-400">التكنولوجيا الخضراء</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-greenEco-100 font-light leading-relaxed">
+                        اكتشف كيف تسهم الحلول التقنية المبتكرة، الطاقة المتجددة، والمدن الذكية في حماية البيئة ومكافحة تغير المناخ لبناء غدٍ أكثر استدامة.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#about" class="px-8 py-4 rounded-2xl bg-white text-greenEco-900 font-bold shadow-xl hover:bg-greenEco-50 transition transform hover:-translate-y-1 text-center">
+                            ابدأ التعلم الآن <i class="fa-solid fa-arrow-down mr-2"></i>
+                        </a>
+                        <a href="#quiz" class="px-8 py-4 rounded-2xl bg-greenEco-700/80 hover:bg-greenEco-700 text-white font-bold border border-white/20 backdrop-blur-md transition text-center">
+                            اختبر معلوماتك <i class="fa-solid fa-puzzle-piece mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 bg-greenEco-500 text-white p-4 rounded-2xl shadow-lg animate-bounce">
+                            <i class="fa-solid fa-seedling text-3xl"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4 space-x-reverse bg-white/10 p-4 rounded-2xl">
+                                <div class="bg-greenEco-500/30 p-3 rounded-xl text-greenEco-200">
+                                    <i class="fa-solid fa-solar-panel text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">طاقة نظيفة 100%</h4>
+                                    <p class="text-xs text-greenEco-200">التحول نحو الشمس والرياح لإنتاج الكهرباء.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 space-x-reverse bg-white/10 p-4 rounded-2xl">
+                                <div class="bg-greenEco-500/30 p-3 rounded-xl text-greenEco-200">
+                                    <i class="fa-solid fa-recycle text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">الاقتصاد الدائري</h4>
+                                    <p class="text-xs text-greenEco-200">إعادة التدوير وتقليل الهدر لتحقيق الاستدامة.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4 space-x-reverse bg-white/10 p-4 rounded-2xl">
+                                <div class="bg-greenEco-500/30 p-3 rounded-xl text-greenEco-200">
+                                    <i class="fa-solid fa-city text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">مدن ذكية مستدامة</h4>
+                                    <p class="text-xs text-greenEco-200">إدارة الموارد بذكاء وخفض الانبعاثات الكربونية.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-greenEco-600 font-bold text-sm tracking-wider uppercase bg-greenEco-50 px-4 py-1.5 rounded-full border border-greenEco-200">مفهوم أساسي</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-greenEco-900 mt-3 mb-4">ما هي التكنولوجيا الخضراء؟</h2>
+                <p class="text-gray-600 text-lg">هي تطبيق الابتكار العلمي والتكنولوجي لحماية البيئة الطبيعية والموارد، وإبطاء أو عكس التأثيرات السلبية للأنشطة البشرية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-greenEco-50/50 p-8 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-greenEco-500/20">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-greenEco-900 mb-3">حماية الموارد الطبيعية</h3>
+                    <p class="text-gray-600 leading-relaxed">تقليل استهلاك الموارد النادرة مثل المياه، المعادن، والوقود الأحفوري والاعتماد على بدائل متجددة وغير ملوثة.</p>
+                </div>
+                <div class="bg-greenEco-50/50 p-8 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-greenEco-500/20">
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-greenEco-900 mb-3">مكافحة تغير المناخ</h3>
+                    <p class="text-gray-600 leading-relaxed">خفض انبعاثات غازات الدفيئة وثاني أكسيد الكربون للحد من ظاهرة الاحتباس الحراري وارتفاع درجات الحرارة العالمية.</p>
+                </div>
+                <div class="bg-greenEco-50/50 p-8 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md shadow-greenEco-500/20">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-greenEco-900 mb-3">تحسين الصحة العامة</h3>
+                    <p class="text-gray-600 leading-relaxed">التقليل من تلوث الهواء والماء، مما انعكس إيجاباً على صحة الإنسان والحد من الأمراض التنفسية والمزمنة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="energy" class="py-20 bg-greenEco-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-greenEco-600 font-bold text-sm tracking-wider uppercase bg-white px-4 py-1.5 rounded-full border border-greenEco-200">مصادر الطاقة النظيفة</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-greenEco-900 mt-3 mb-4">ثورة الطاقة المتجددة</h2>
+                <p class="text-gray-600 text-lg">التحول من الوقود الأحفوري إلى مصادر طاقة طبيعية ومتجددة لا تنضب ولا تلوث البيئة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Solar Energy -->
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-greenEco-900 mb-2">الطاقة الشمسية</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">استخدام الألواح الكهروضوئية لتحويل ضوء الشمس مباشرة إلى كهرباء نظيفة للمنازل والمنشآت.</p>
+                    </div>
+                    <span class="inline-block bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-lg w-fit">متوفرة وغزيرة</span>
+                </div>
+                <!-- Wind Energy -->
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-greenEco-900 mb-2">طاقة الرياح</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">الاستفادة من حركة الرياح عبر توربينات ضخمة لتوليد طاقة كهربائية هائلة دون مخلفات.</p>
+                    </div>
+                    <span class="inline-block bg-sky-50 text-sky-700 text-xs font-bold px-3 py-1 rounded-lg w-fit">كفاءة عالية</span>
+                </div>
+                <!-- Hydroelectric -->
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-greenEco-900 mb-2">الطاقة الكهرومائية</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">استغلال تدفق المياه في الأنهار والسدود لتشغيل مولدات الكهرباء النظيفة المستدامة.</p>
+                    </div>
+                    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-lg w-fit">مصدر أساسي</span>
+                </div>
+                <!-- Green Hydrogen -->
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-greenEco-900 mb-2">الهيدروجين الأخضر</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">إنتاج الهيدروجين عبر التحليل الكهربائي للماء باستخدام طاقة متجددة، وهو وقود المستقبل النظيف.</p>
+                    </div>
+                    <span class="inline-block bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-lg w-fit">تقنية واعدة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cities" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-greenEco-600 font-bold text-sm tracking-wider uppercase bg-greenEco-50 px-4 py-1.5 rounded-full border border-greenEco-200">آفاق التطبيق</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-greenEco-900 mt-3 mb-4">مدن ذكية، زراعة مستدامة، واقتصاد دائري</h2>
+                <p class="text-gray-600 text-lg">كيف تعيد التكنولوجيا صياغة أسلوب حياتنا بالكامل لتحقيق التوازن البيئي.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Smart Cities & Transport -->
+                <div class="bg-greenEco-50/40 p-8 rounded-3xl border border-greenEco-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-greenEco-900 mb-3">المدن الذكية والنقل الكهربائي</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">اعتماد شبكات إضاءة ذكية، مباني موفرة للطاقة، وتوسيع نطاق السيارات الكهربائية وشبكات القطارات الخضراء لتقليل الازدحام والانبعاثات.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700 font-medium border-t border-greenEco-200 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> محطات شحن السيارات الكهربائية</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> إدارة النفايات بالاستشعار الذكي</li>
+                    </ul>
+                </div>
+                <!-- Sustainable Agriculture -->
+                <div class="bg-greenEco-50/40 p-8 rounded-3xl border border-greenEco-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-greenEco-900 mb-3">الزراعة المستدامة والتقنيات الحيوية</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">استخدام إنترنت الأشياء (IoT) والذكاء الاصطناعي في الزراعة الدقيقة، الري بالتنقيط الذكي، والزراعة الرأسية لتوفير المياه والمبيدات.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700 font-medium border-t border-greenEco-200 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> حساسات رطوبة التربة الذكية</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> تقليل استخدام المبيدات الكيميائية</li>
+                    </ul>
+                </div>
+                <!-- Circular Economy -->
+                <div class="bg-greenEco-50/40 p-8 rounded-3xl border border-greenEco-100 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-greenEco-600 text-white flex items-center justify-center text-2xl mb-6 shadow-md">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-greenEco-900 mb-3">الاقتصاد الدائري وإعادة التدوير</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">التحول من نموذج (خذ، اصنع، تخلص) إلى نظام مغلق يتم فيه إعادة استخدام المنتجات، إصلاحها، وتدويرها بالكامل لصفر نفايات.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-700 font-medium border-t border-greenEco-200 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> إعادة تدوير الإلكترونيات والبلاستيك</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-greenEco-600 ml-2"></i> تحويل المخلفات العضوية لسماد</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-20 bg-greenEco-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="bg-greenEco-800 text-greenEco-200 text-xs font-bold px-4 py-1.5 rounded-full border border-greenEco-700 uppercase tracking-wider">أداة تفاعلية</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3 mb-4">حاسبة البصمة الكربونية البسيطة</h2>
+                <p class="text-greenEco-200 text-lg">أدخل بعض البيانات عن نمط حياتك لتقدير بصمتك الكربونية الشهرية واكتشاف نصائح مخصصة لتقليلها.</p>
+            </div>
+
+            <div class="bg-white text-gray-800 p-8 sm:p-10 rounded-3xl shadow-2xl space-y-6">
+                <!-- Question 1: Energy -->
+                <div>
+                    <label class="block font-bold text-greenEco-900 mb-2 flex items-center">
+                        <i class="fa-solid fa-bolt text-amber-500 ml-2"></i> 1. ما هو متوسط استهلاك منزلك الشهري من الكهرباء؟
+                    </label>
+                    <select id="calcEnergy" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-greenEco-500 font-medium">
+                        <option value="50">منخفض (أقل من 300 كيلووات ساعة) - بصمة منخفضة</option>
+                        <option value="120" selected>متوسط (300 - 800 كيلووات ساعة) - بصمة متوسطة</option>
+                        <option value="250">مرتفع (أكثر من 800 كيلووات ساعة) - بصمة عالية</option>
+                    </select>
+                </div>
+
+                <!-- Question 2: Transport -->
+                <div>
+                    <label class="block font-bold text-greenEco-900 mb-2 flex items-center">
+                        <i class="fa-solid fa-car text-blue-500 ml-2"></i> 2. ما هي وسيلة النقل الأساسية التي تعتمد عليها؟
+                    </label>
+                    <select id="calcTransport" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-greenEco-500 font-medium">
+                        <option value="20">المشي، الدراجة، أو النقل العام (صديق للبيئة)</option>
+                        <option value="90" selected>سيارة خاصة تعمل بالوقود التقليدي</option>
+                        <option value="40">سيارة هجينة (Hybrid) أو كهربائية</option>
+                    </select>
+                </div>
+
+                <!-- Question 3: Waste -->
+                <div>
+                    <label class="block font-bold text-greenEco-900 mb-2 flex items-center">
+                        <i class="fa-solid fa-trash-can text-emerald-600 ml-2"></i> 3. هل تقوم بفرز النفايات وإعادة التدوير؟
+                    </label>
+                    <select id="calcWaste" class="w-full p-4 rounded-xl border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-greenEco-500 font-medium">
+                        <option value="20">نعم، أقوم بفرز وإعادة تدوير معظم النفايات</option>
+                        <option value="70" selected>أحياناً أو بشكل محدود</option>
+                        <option value="120">لا أقوم بإعادة التدوير إطلاقاً</option>
+                    </select>
+                </div>
+
+                <button onclick="calculateFootprint()" class="w-full py-4 rounded-xl bg-greenEco-600 hover:bg-greenEco-700 text-white font-bold text-lg shadow-lg shadow-greenEco-600/30 transition transform hover:scale-[1.01]">
+                    احسب النتيجة الآن <i class="fa-solid fa-calculator mr-2"></i>
+                </button>
+
+                <!-- Result Box -->
+                <div id="calcResult" class="hidden mt-6 p-6 rounded-2xl bg-greenEco-50 border border-greenEco-200 space-y-4">
+                    <div class="flex items-center justify-between border-b border-greenEco-200 pb-4">
+                        <div>
+                            <span class="text-xs text-greenEco-700 font-bold uppercase block">تقدير البصمة الشهرية</span>
+                            <h3 id="resultScore" class="text-3xl font-black text-greenEco-900">0 كجم CO2</h3>
+                        </div>
+                        <div id="resultBadge" class="px-4 py-2 rounded-xl text-sm font-bold"></div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-greenEco-900 mb-2"><i class="fa-solid fa-lightbulb text-amber-500 ml-1"></i> توصيات مخصصة لك:</h4>
+                        <ul id="resultTips" class="space-y-2 text-sm text-gray-700"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-greenEco-600 font-bold text-sm tracking-wider uppercase bg-greenEco-50 px-4 py-1.5 rounded-full border border-greenEco-200">اختبر معلوماتك</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-greenEco-900 mt-3 mb-4">تحدي التكنولوجيا الخضراء</h2>
+                <p class="text-gray-600 text-lg">أجب عن 3 أسئلة سريعة واعرف مدى إلمامك بمفاهيم الاستدامة والطاقة النظيفة.</p>
+            </div>
+
+            <div class="bg-greenEco-50/50 p-8 sm:p-10 rounded-3xl border border-greenEco-100 shadow-xl">
+                <!-- Quiz Container -->
+                <div id="quizContainer">
+                    <div class="flex justify-between items-center mb-6 text-sm font-bold text-greenEco-700">
+                        <span id="quizStep">السؤال 1 من 3</span>
+                        <span id="quizProgress" class="bg-greenEco-200 text-greenEco-800 px-3 py-1 rounded-full">33%</span>
+                    </div>
+                    <h3 id="quizQuestion" class="text-xl font-bold text-greenEco-900 mb-6"></h3>
+                    <div id="quizOptions" class="space-y-3 mb-8"></div>
+                    <button id="nextQuizBtn" onclick="nextQuizQuestion()" class="hidden w-full py-3.5 rounded-xl bg-greenEco-600 hover:bg-greenEco-700 text-white font-bold transition">
+                        السؤال التالي <i class="fa-solid fa-arrow-left mr-2"></i>
+                    </button>
+                </div>
+
+                <!-- Quiz Result -->
+                <div id="quizResultBox" class="hidden text-center space-y-6">
+                    <div class="w-20 h-20 rounded-full bg-greenEco-600 text-white flex items-center justify-center text-4xl mx-auto shadow-lg shadow-greenEco-500/30">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <h3 id="quizFinalTitle" class="text-2xl font-black text-greenEco-900 mb-2"></h3>
+                        <p id="quizFinalDesc" class="text-gray-600 text-base"></p>
+                    </div>
+                    <button onclick="resetQuiz()" class="px-8 py-3.5 rounded-xl bg-greenEco-600 hover:bg-greenEco-700 text-white font-bold transition">
+                        إعادة الاختبار <i class="fa-solid fa-rotate-right mr-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide" class="py-20 bg-greenEco-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-greenEco-600 font-bold text-sm tracking-wider uppercase bg-white px-4 py-1.5 rounded-full border border-greenEco-200">خطوات عملية</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-greenEco-900 mt-3 mb-4">دليل الاستدامة اليومية</h2>
+                <p class="text-gray-600 text-lg">عادات بسيطة في منزلك وعملك تقود إلى تأثير بيئي هائل ومستدام.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="text-greenEco-600 text-2xl mb-4 font-black">01</div>
+                    <h3 class="font-bold text-greenEco-900 text-lg mb-2">إدارة استهلاك الطاقة</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">استبدال المصابيح التقليدية بـ LED، فصل الأجهزة غير المستخدمة من المقابس، والاعتماد على الإضاءة الطبيعية نهاراً.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="text-greenEco-600 text-2xl mb-4 font-black">02</div>
+                    <h3 class="font-bold text-greenEco-900 text-lg mb-2">ترشيد استهلاك المياه</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">إصلاح صمامات المياه المتسربة، استخدام أدوات ترشيد التدفق، وتقليل زمن الاستحمام للحفاظ على هذه الثروة.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="text-greenEco-600 text-2xl mb-4 font-black">03</div>
+                    <h3 class="font-bold text-greenEco-900 text-lg mb-2">تقليل البلاستيك أحادي الاستخدام</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">استخدام قوارير مياه قابلة لإعادة الاستخدام، أكياس تسوق قماشية، والابتعاد عن الأدوات البلاستيكية ذات الاستخدام الواحد.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-greenEco-100 card-hover">
+                    <div class="text-greenEco-600 text-2xl mb-4 font-black">04</div>
+                    <h3 class="font-bold text-greenEco-900 text-lg mb-2">التنقل المستدام</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">مشاركة الرحلات مع الزملاء، استخدام الدراجات، أو ركوب وسائل النقل العام متى أمكن ذلك لتقليل زحام الطرق والانبعاثات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-greenEco-900 text-white py-12 border-t border-greenEco-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-xl bg-greenEco-700 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg">أكاديمية التكنولوجيا الخضراء</span>
+                    <p class="text-xs text-greenEco-300">جميع الحقوق محفوظة © 2026</p>
+                </div>
+            </div>
+            <div class="flex space-x-6 space-x-reverse text-greenEco-200">
+                <a href="#about" class="hover:text-white transition">المفهوم</a>
+                <a href="#energy" class="hover:text-white transition">الطاقة</a>
+                <a href="#calculator" class="hover:text-white transition">الحاسبة</a>
+                <a href="#quiz" class="hover:text-white transition">الاختبار</a>
+                <a href="#guide" class="hover:text-white transition">الدليل</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Carbon Footprint Calculator Logic
+        function calculateFootprint() {
+            const energy = parseInt(document.getElementById('calcEnergy').value);
+            const transport = parseInt(document.getElementById('calcTransport').value);
+            const waste = parseInt(document.getElementById('calcWaste').value);
+
+            const total = energy + transport + waste;
+            const resultBox = document.getElementById('calcResult');
+            const resultScore = document.getElementById('resultScore');
+            const resultBadge = document.getElementById('resultBadge');
+            const resultTips = document.getElementById('resultTips');
+
+            resultBox.classList.remove('hidden');
+            resultScore.textContent = total + ' كجم CO2 شهرياً';
+
+            let badgeHtml = '';
+            let tips = [];
+
+            if (total < 120) {
+                badgeHtml = '<span class="bg-green-100 text-green-800 px-3 py-1 rounded-lg">ممتاز! بصمتك البيئية منخفضة</span>';
+                tips = [
+                    'استمر في الحفاظ على هذا النمط الصديق للبيئة.',
+                    'شارك تجربتك ونصائحك مع أصدقائك وعائلتك.'
+                ];
+            } else if (total < 220) {
+                badgeHtml = '<span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-lg">متوسط! يمكنك التحسين</span>';
+                tips = [
+                    'حاول تربيد استهلاك الكهرباء وإطفاء الإنارة غير الضرورية.',
+                    'فكر في مشاركة رحلاتك بالسيارة مع الزملاء.'
+                ];
+            } else {
+                badgeHtml = '<span class="bg-red-100 text-red-800 px-3 py-1 rounded-lg">مرتفع! يتطلب تدخلاً سريعاً</span>';
+                tips = [
+                    'انتقل نحو استخدام مصادر طاقة متجددة كالمنزل المزود بألواح شمسية.',
+                    'قلل من استخدام السيارات الخاصة واعتمد على النقل العام.',
+                    'ابدأ بفرز النفايات وإعادة التدوير بانتظام.'
+                ];
+            }
+
+            resultBadge.innerHTML = badgeHtml;
+            resultTips.innerHTML = tips.map(tip => `<li class="flex items-center"><i class="fa-solid fa-circle-check text-greenEco-600 ml-2"></i> ${tip}</li>`).join('');
+        }
+
+        // Quiz Logic
+        const quizData = [
+            {
+                question: "ما هو المصدر الأساسي والأنظف لإنتاج الهيدروجين الأخضر؟",
+                options: [
+                    "التحليل الكهربائي للماء باستخدام طاقة متجددة",
+                    "احتراق الفحم الحجري والغاز الطبيعي",
+                    "استخراج النفط الخام وتكريره"
+                ],
+                answer: 0
+            },
+            {
+                question: "ما هو الهدف الرئيسي من الاقتصاد الدائري (Circular Economy)؟",
+                options: [
+                    "زيادة الإنتاج والتخلص السريع من المنتجات",
+                    "إعادة استخدام المنتجات وتدويرها لتحقيق صفر نفايات",
+                    "حرق المخلفات لإنتاج طاقة غير نظيفة"
+                ],
+                answer: 1
+            },
+            {
+                question: "أي مما يلي يُعد مثالاً مباشراً على التكنولوجيا الخضراء في المدن؟",
+                options: [
+                    "السيارات التي تعمل بالديزل القديم",
+                    "محطات شحن السيارات الكهربائية وأنظمة الإضاءة الذكية",
+                    "المصانع الكيميائية التقليدية الكبرى"
+                ],
+                answer: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedOption = null;
+
+        function loadQuiz() {
+            const q = quizData[currentQuestion];
+            document.getElementById('quizStep').textContent = `السؤال ${currentQuestion + 1} من ${quizData.length}`;
+            document.getElementById('quizProgress').textContent = `${Math.round(((currentQuestion + 1) / quizData.length) * 100)}%`;
+            document.getElementById('quizQuestion').textContent = q.question;
+
+            const optionsContainer = document.getElementById('quizOptions');
+            optionsContainer.innerHTML = '';
+            selectedOption = null;
+            document.getElementById('nextQuizBtn').classList.add('hidden');
+
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-right p-4 rounded-xl border border-gray-200 bg-white hover:bg-greenEco-50 hover:border-greenEco-300 font-medium transition flex items-center justify-between";
+                btn.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-gray-400"></i>`;
+                btn.onclick = () => selectOption(index, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(index, btnElement) {
+            const buttons = document.getElementById('quizOptions').children;
+            for (let b of buttons) {
+                b.classList.remove('border-greenEco-600', 'bg-greenEco-50');
+                b.querySelector('i').className = "fa-regular fa-circle text-gray-400";
+            }
+            btnElement.classList.add('border-greenEco-600', 'bg-greenEco-50');
+            btnElement.querySelector('i').className = "fa-solid fa-circle-check text-greenEco-600";
+            selectedOption = index;
+            document.getElementById('nextQuizBtn').classList.remove('hidden');
+        }
+
+        function nextQuizQuestion() {
+            if (selectedOption === quizData[currentQuestion].answer) {
+                score++;
+            }
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                loadQuiz();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quizContainer').classList.add('hidden');
+            const resultBox = document.getElementById('quizResultBox');
+            resultBox.classList.remove('hidden');
+
+            const title = document.getElementById('quizFinalTitle');
+            const desc = document.getElementById('quizFinalDesc');
+
+            if (score === quizData.length) {
+                title.textContent = "أنت خبير في التكنولوجيا الخضراء! 🌟";
+                desc.textContent = `لقد أجبت بشكل صحيح على جميع الأسئلة (${score}/${quizData.length}). لديك وعي بيئي ممتاز!`;
+            } else if (score > 0) {
+                title.textContent = "نتيجة جيدة! 🌱";
+                desc.textContent = `أجبت بشكل صحيح على (${score}/${quizData.length}) أسئلة. يمكنك تصفح أقسام الموقع لتعزيز معلوماتك أكثر.`;
+            } else {
+                title.textContent = "تحتاج لاستكشاف المزيد! 💧";
+                desc.textContent = `أجبت على (${score}/${quizData.length}). ننصحك بقراءة الأقسام التعليمية ودليل الاستدامة جيداً.`;
+            }
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('quizResultBox').classList.add('hidden');
+            document.getElementById('quizContainer').classList.remove('hidden');
+            loadQuiz();
+        }
+
+        // Initialize Quiz on load
+        window.onload = function() {
+            loadQuiz();
+        };
+    </script>
+</body>
+</html>
